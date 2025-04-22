@@ -24,9 +24,9 @@ public class GrayFeignInterceptor implements RequestInterceptor {
 				template.header("X-Gray", grayTag);
 			}
 			// 传递用户ID（需与Feign接口匹配）
-            String userId = attributes.getRequest().getHeader("userId");
+            String userId = attributes.getRequest().getHeader("X-User-Id");
             if (userId != null) {
-                template.header("userId", userId);
+                template.header("X-User-Id", userId);
             }
 		}
 
