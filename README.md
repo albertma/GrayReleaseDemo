@@ -27,8 +27,6 @@ $mvn clean install -Dmaven.test.skip=true #编译安装
 $mvn package -Dmaven.test.skip=true  #打包成jar
 $mvn spring-boot:run   #运行default配置的服务
 $mvn spring-boot:run -Dspring.profiles.active=gray  #运行gray release配置的服务
-
-
 ```
 
 
@@ -280,4 +278,5 @@ gray release properties, the service is selected by GrayRandomLoadBalancer.
 
 ```properties
 eureka.instance.metadata-map.version=gray
+
 ```
